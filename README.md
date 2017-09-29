@@ -10,7 +10,8 @@ It is intended to be used on embedded projects.
 ---
 
 ## Requirements
-In order for the tool to work you need to ensure the following:  
+In order for the tool to work you need to ensure the following:
+
     * Have Python 3
     * Build your codebase with arm-none-eabi-gcc
     * Compile with -fstackusage and -fdump-rtl-dfinish
@@ -24,11 +25,14 @@ If you have libraries that your program depends on compile them as described abo
 
 
 Example output:
-    Translation Unit	Function Name	Stack	Unresolved Dependencies
-    main			main		  104	memcpy
-    main			compute		   44
+
+    | Translation Unit | Function Name  | Stack	 | Unresolved Dependencies |
+    | :--------------- | :------------- | -----: | :---------------------- |
+    | main             | main           | 104	 | memcpy                  |
+    | main             | compute        | 44     |                         |
 
 The output is a table of four columns
+
     Translation Unit:
         The c file
     Function Name:
