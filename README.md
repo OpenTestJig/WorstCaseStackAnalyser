@@ -4,18 +4,19 @@ Inspired by [Peter McKinnis's version](https://github.com/PeterMcKinnis/WostCase
 
 NOTE: This is an initial release so it is highly **experimental**!
 
----
-
 This little tool statically analyzes the stack requirements of your C programs.  
 It is intended to be used on embedded projects.
 
-In order for the tool to work you need to ensure the following:
+---
+
+## Requirements
+In order for the tool to work you need to ensure the following:  
     * Have Python 3
     * Build your codebase with arm-none-eabi-gcc
     * Compile with -fstackusage and -fdump-rtl-dfinish
     * DO NOT ENABLE Link Time Optimization
 
-## Usage:
+## Usage
     `python3 WorstCaseStackAnalyzer.py directory1 [directory2] [...]`
 
 Simply point this tool to your build directory and it will analyze the data for you.
@@ -41,7 +42,7 @@ The output is a table of four columns
 
 ---
 
-## TODO:
+## TODO
     * Improve output
     * Cleanup code
     * Make it work for non-embedded codebases as well
@@ -50,5 +51,5 @@ The output is a table of four columns
     * Allow non-recursive directory parsing
     * Support compilers other than arm-none-eabi-gcc
 
-## KNOWN ISSUES:
+## KNOWN ISSUES
     * Compiling with gcc does not work
